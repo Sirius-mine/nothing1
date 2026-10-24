@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>无事 · 木鱼</title>
+  <meta name="description" content="轻敲一下木鱼，听见一声「没事」。">
+  <meta name="theme-color" content="#f2eadc">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239a3b2c'/%3E%3Cpath d='M18 35c0-8 10-14 20-14 14 0 22 8 22 18 0 11-9 17-22 17-12 0-20-6-20-14 0-3 1-6 3-8' fill='%23f6eddc'/%3E%3Cpath d='M41 26c6 7 5 19-3 25' stroke='%239a3b2c' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script type="module" crossorigin src="./assets/index-BgVXJc7w.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CND94iDg.css">
+  <style>.account-nav, .account-dialog, #accountNotice { display: none !important; }</style>
+</head>
+<body>
+  <div class="page-frame" aria-hidden="true"></div>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <div class="backdrop-mark" aria-hidden="true">無</div>
+
+  <div class="site">
+    <header class="topbar">
+      <div class="brand" aria-label="无事木鱼">
+        <span class="brand-seal" aria-hidden="true">無</span>
+        <div class="brand-lockup">
+          <h1 class="brand-name">无事</h1>
+          <p class="brand-sub">MU YU</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true" aria-label="关闭声音" title="关闭声音">
+        <svg class="sound-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 9.4h3.1L12 5.3v13.4l-4.9-4.1H4z" fill="currentColor" opacity=".82"/>
+          <path class="sound-wave" d="M15.2 9.1c1.35 1.65 1.35 4.15 0 5.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path class="sound-wave" d="M18.2 6.3c2.9 3.15 2.9 8.25 0 11.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path class="sound-slash" d="M4.2 4.2 19.8 19.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span class="sound-text">声音</span>
+      </button>
+      <nav class="account-nav" aria-label="账户"><button type="button" id="loginButton">登录</button><button type="button" id="signupButton" class="register-button">注册</button><button type="button" id="profileButton" hidden aria-haspopup="dialog">用户信息</button></nav>
+      </div>
+    </header>
+
+    <main class="stage" id="stage">
+      <p class="aside-note" aria-hidden="true">一敲一放 · 万般自在</p>
+
+      <div class="scene">
+        <div class="fish-area">
+          <div class="halo" aria-hidden="true"></div>
+          <div class="orbit orbit-a" aria-hidden="true"></div>
+          <div class="orbit orbit-b" aria-hidden="true"></div>
+
+          <button class="muyu" id="muyu" type="button" aria-label="敲一下木鱼" aria-describedby="hint">
+            <svg class="fish-art" viewBox="0 0 640 640" role="presentation" focusable="false">
+              <defs>
+                <linearGradient id="bodyWood" x1="190" y1="100" x2="470" y2="505" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#c79261"/>
+                  <stop offset=".3" stop-color="#ab7249"/>
+                  <stop offset=".66" stop-color="#83502f"/>
+                  <stop offset="1" stop-color="#5b341f"/>
+                </linearGradient>
+                <radialGradient id="bodySheen" cx=".29" cy=".17" r=".84">
+                  <stop offset="0" stop-color="#ffe4bb" stop-opacity=".45"/>
+                  <stop offset=".42" stop-color="#efc08c" stop-opacity=".1"/>
+                  <stop offset="1" stop-color="#241007" stop-opacity=".34"/>
+                </radialGradient>
+                <linearGradient id="bodyFloor" x1="320" y1="380" x2="320" y2="505" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#2a1308" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#210f07" stop-opacity=".55"/>
+                </linearGradient>
+                <linearGradient id="slitFill" x1="440" y1="180" x2="495" y2="445" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#281309"/>
+                  <stop offset=".55" stop-color="#150a05"/>
+                  <stop offset="1" stop-color="#0d0603"/>
+                </linearGradient>
+                <linearGradient id="tailWood" x1="95" y1="285" x2="225" y2="405" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#986240"/>
+                  <stop offset=".55" stop-color="#70432a"/>
+                  <stop offset="1" stop-color="#4b2a18"/>
+                </linearGradient>
+                <linearGradient id="cushionCloth" x1="320" y1="427" x2="320" y2="548" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#a84a3c"/>
+                  <stop offset=".48" stop-color="#843028"/>
+                  <stop offset="1" stop-color="#561a16"/>
+                </linearGradient>
+                <linearGradient id="malletWood" x1="520" y1="250" x2="596" y2="515" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#c39162"/>
+                  <stop offset=".45" stop-color="#94643f"/>
+                  <stop offset="1" stop-color="#5f3822"/>
+                </linearGradient>
+                <radialGradient id="malletHead" cx=".3" cy=".25" r=".9">
+                  <stop offset="0" stop-color="#d3a271"/>
+                  <stop offset=".55" stop-color="#95613c"/>
+                  <stop offset="1" stop-color="#59331e"/>
+                </radialGradient>
+                <filter id="blurWide" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="18"/>
+                </filter>
+                <filter id="blurSoft" x="-40%" y="-40%" width="180%" height="180%">
+                  <feGaussianBlur stdDeviation="7"/>
+                </filter>
+                <filter id="blurFine" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="2.2"/>
+                </filter>
+                <clipPath id="bodyClip">
+                  <path d="M336 118C426 112 498 168 520 255C541 342 518 417 450 459C381 502 278 492 211 446C148 403 130 325 154 248C178 169 248 124 336 118Z"/>
+                </clipPath>
+              </defs>
+
+              <g class="art-shadow" aria-hidden="true">
+                <ellipse cx="330" cy="551" rx="216" ry="28" fill="#4a2a16" opacity=".24" filter="url(#blurWide)"/>
+              </g>
+
+              <g class="cushion" aria-hidden="true">
+                <path d="M120 480C134 447 222 426 327 426C432 426 516 447 530 480C540 511 436 548 327 548C218 548 110 511 120 480Z" fill="url(#cushionCloth)"/>
+                <path d="M144 473C202 444 254 436 327 436C400 436 458 444 510 473" fill="none" stroke="#d8a568" stroke-opacity=".22" stroke-width="1.5"/>
+                <path d="M155 477C207 505 262 520 327 521C392 520 449 505 498 477" fill="none" stroke="#d8a568" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="1 8" stroke-linecap="round"/>
+                <path d="M134 489C191 519 254 535 327 536C400 535 463 519 516 489" fill="none" stroke="#40120f" stroke-opacity=".42" stroke-width="2"/>
+                <path d="M168 460C194 482 209 506 213 533" fill="none" stroke="#4d1613" stroke-opacity=".3" stroke-width="2"/>
+                <path d="M486 460C460 482 445 506 441 533" fill="none" stroke="#4d1613" stroke-opacity=".3" stroke-width="2"/>
+                <ellipse cx="294" cy="461" rx="118" ry="20" fill="#c66a55" opacity=".13" filter="url(#blurSoft)"/>
+              </g>
+
+              <g class="tail" aria-hidden="true">
+                <path d="M228 306C184 270 130 246 42 238C66 280 77 308 76 336C53 360 37 389 32 423C100 398 155 392 223 401C210 372 210 337 228 306Z" fill="url(#tailWood)" stroke="#3b2112" stroke-opacity=".34" stroke-width="1.6"/>
+                <path d="M219 297C173 264 122 246 57 240" fill="none" stroke="#e4b482" stroke-opacity=".26" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M219 409C160 396 105 399 48 419" fill="none" stroke="#3a1f10" stroke-opacity=".2" stroke-width="2" stroke-linecap="round"/>
+                <g fill="none" stroke="#3a1f10" stroke-opacity=".34" stroke-width="1.8" stroke-linecap="round">
+                  <path d="M177 292C145 300 112 318 83 339"/>
+                  <path d="M192 319C157 327 121 345 92 367"/>
+                  <path d="M187 351C155 358 120 375 93 394"/>
+                  <path d="M173 380C144 387 114 397 86 408"/>
+                </g>
+                <g fill="none" stroke="#f0c18c" stroke-opacity=".11" stroke-width="1.3" stroke-linecap="round">
+                  <path d="M160 269C133 282 108 300 87 319"/>
+                  <path d="M173 369C144 382 117 391 96 403"/>
+                </g>
+              </g>
+
+              <g class="fish-group">
+                <path d="M336 118C426 112 498 168 520 255C541 342 518 417 450 459C381 502 278 492 211 446C148 403 130 325 154 248C178 169 248 124 336 118Z" transform="translate(0 15)" fill="#2a1408" opacity=".33" filter="url(#blurSoft)"/>
+
+                <g class="fish-bob">
+                  <path class="fish-body" d="M336 118C426 112 498 168 520 255C541 342 518 417 450 459C381 502 278 492 211 446C148 403 130 325 154 248C178 169 248 124 336 118Z" fill="url(#bodyWood)"/>
+                  <path d="M336 118C426 112 498 168 520 255C541 342 518 417 450 459C381 502 278 492 211 446C148 403 130 325 154 248C178 169 248 124 336 118Z" fill="url(#bodySheen)"/>
+
+                  <g clip-path="url(#bodyClip)">
+                    <rect x="120" y="370" width="430" height="140" fill="url(#bodyFloor)"/>
+                    <ellipse cx="257" cy="222" rx="145" ry="92" fill="#ffe3b7" opacity=".08" filter="url(#blurWide)"/>
+                    <path d="M139 287C219 242 305 236 381 263C439 284 483 320 512 366" fill="none" stroke="#3a1d0e" stroke-opacity=".24" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M134 321C215 279 303 273 379 300C436 320 477 353 507 396" fill="none" stroke="#3a1d0e" stroke-opacity=".21" stroke-width="2.6" stroke-linecap="round"/>
+                    <path d="M139 356C215 317 302 313 377 338C433 357 471 388 497 426" fill="none" stroke="#3a1d0e" stroke-opacity=".23" stroke-width="2.4" stroke-linecap="round"/>
+                    <path d="M155 392C228 357 307 355 378 377C428 393 460 418 483 447" fill="none" stroke="#3a1d0e" stroke-opacity=".2" stroke-width="2.2" stroke-linecap="round"/>
+                    <path d="M183 429C249 399 318 399 381 419C420 431 447 452 466 475" fill="none" stroke="#3a1d0e" stroke-opacity=".17" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M163 275C234 238 316 237 387 266C437 287 474 319 500 355" fill="none" stroke="#f5cb96" stroke-opacity=".13" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M171 339C236 307 315 305 385 330C434 348 468 376 492 409" fill="none" stroke="#f5cb96" stroke-opacity=".09" stroke-width="1.2" stroke-linecap="round"/>
+
+                    <g fill="none" stroke-linecap="round">
+                      <path d="M368 373C386 332 355 289 312 292C263 296 238 350 265 393C293 438 360 430 380 382C398 339 370 312 338 318C311 323 302 352 316 369" stroke="#2c170b" stroke-opacity=".27" stroke-width="4"/>
+                      <path d="M368 371C386 330 355 287 312 290C263 294 238 348 265 391C293 436 360 428 380 380C398 337 370 310 338 316C311 321 302 350 316 367" stroke="#f3c58c" stroke-opacity=".14" stroke-width="1.6"/>
+                    </g>
+
+                    <g class="engraved-eye" fill="none">
+                      <path d="M370 247C381 228 403 222 422 234C412 247 396 253 379 253C375 252 372 250 370 247Z" fill="#31190c" fill-opacity=".32" stroke="#f6ce98" stroke-opacity=".12" stroke-width="1.5"/>
+                      <circle cx="398" cy="240" r="6.5" fill="#231108" fill-opacity=".42" stroke="none"/>
+                      <path d="M374 246C386 248 401 245 416 237" stroke="#f4cb94" stroke-opacity=".2" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M368 220C385 207 408 208 427 220" stroke="#2f180d" stroke-opacity=".16" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+
+                    <path d="M207 164C267 119 354 109 430 140" fill="none" stroke="#ffe0af" stroke-opacity=".22" stroke-width="5" stroke-linecap="round" filter="url(#blurFine)"/>
+                    <path d="M184 409C245 443 317 458 386 446C427 439 461 423 486 401" fill="none" stroke="#2c160b" stroke-opacity=".13" stroke-width="3" stroke-linecap="round"/>
+                  </g>
+
+                  <path d="M336 118C426 112 498 168 520 255C541 342 518 417 450 459C381 502 278 492 211 446C148 403 130 325 154 248C178 169 248 124 336 118Z" fill="none" stroke="#3b2012" stroke-opacity=".35" stroke-width="2"/>
+                  <path d="M438 172C492 195 523 251 520 316C517 376 490 420 444 448C462 408 467 365 460 321C453 277 434 237 402 206C413 190 425 178 438 172Z" fill="url(#slitFill)"/>
+                  <path d="M438 172C492 195 523 251 520 316C517 376 490 420 444 448" fill="none" stroke="#e5b47a" stroke-opacity=".3" stroke-width="1.8"/>
+                  <path d="M402 206C434 237 453 277 460 321C467 365 462 408 444 448" fill="none" stroke="#2a140a" stroke-opacity=".5" stroke-width="2.2"/>
+                  <path d="M447 188C477 218 492 260 492 307" fill="none" stroke="#b87b4a" stroke-opacity=".18" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M428 159C493 184 531 247 528 319C525 385 497 429 450 459" fill="none" stroke="#f3cd97" stroke-opacity=".2" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M269 123C312 111 360 111 405 123" fill="none" stroke="#ffe4b4" stroke-opacity=".16" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+              </g>
+
+              <g class="mallet" aria-hidden="true">
+                <path d="M609 515L578 303" fill="none" stroke="#2a160c" stroke-width="20" stroke-linecap="round" opacity=".22" filter="url(#blurSoft)" transform="translate(4 7)"/>
+                <path d="M609 515L578 303" fill="none" stroke="url(#malletWood)" stroke-width="16" stroke-linecap="round"/>
+                <path d="M607 506L581 318" fill="none" stroke="#e8bc88" stroke-opacity=".24" stroke-width="3" stroke-linecap="round"/>
+                <g class="mallet-head" transform="rotate(-22 577 281)">
+                  <rect x="528" y="259" width="98" height="48" rx="24" fill="#2a150a" opacity=".22" filter="url(#blurSoft)" transform="translate(2 7)"/>
+                  <rect x="528" y="257" width="98" height="48" rx="24" fill="url(#malletHead)"/>
+                  <ellipse cx="531" cy="281" rx="9" ry="23" fill="#704229"/>
+                  <ellipse cx="623" cy="281" rx="10" ry="23" fill="#b98556"/>
+                  <path d="M540 269C563 260 594 260 616 270" fill="none" stroke="#ffe0b2" stroke-opacity=".24" stroke-width="2.4" stroke-linecap="round"/>
+                  <path d="M539 292C565 300 595 300 616 290" fill="none" stroke="#3f2112" stroke-opacity=".3" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M552 261C554 276 554 289 552 301" fill="none" stroke="#3b2012" stroke-opacity=".17" stroke-width="1.8"/>
+                  <path d="M592 260C594 275 594 289 592 302" fill="none" stroke="#3b2012" stroke-opacity=".15" stroke-width="1.6"/>
+                </g>
+                <path d="M567 302C577 307 588 307 597 302" fill="none" stroke="#d8aa69" stroke-opacity=".28" stroke-width="2.4" stroke-linecap="round"/>
+              </g>
+
+              <g class="tassel" aria-hidden="true">
+                <path d="M327 521C328 534 327 544 327 552" fill="none" stroke="#d8aa69" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M327 550L340 562L327 575L314 562Z" fill="#8d3025" stroke="#d8aa69" stroke-opacity=".33" stroke-width="1.2"/>
+                <path d="M327 574C322 587 316 598 310 608" fill="none" stroke="#9a3b2d" stroke-width="3" stroke-linecap="round"/>
+                <path d="M327 574C326 588 325 599 324 610" fill="none" stroke="#a54434" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M327 574C332 587 338 598 344 607" fill="none" stroke="#9a3b2d" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="310" cy="610" r="2.2" fill="#d8aa69"/>
+                <circle cx="324" cy="612" r="2.2" fill="#d8aa69"/>
+                <circle cx="344" cy="609" r="2.2" fill="#d8aa69"/>
+                <circle cx="327" cy="558" r="3.2" fill="#c69255"/>
+              </g>
+            </svg>
+          </button>
+        </div>
+
+        <div class="pop-layer" id="popLayer" aria-hidden="true"></div>
+
+        <p class="hint" id="hint"><span class="hint-line" aria-hidden="true"></span>轻敲木鱼<span class="hint-line" aria-hidden="true"></span></p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="wish">愿你今日，<span>无事发生</span>。</p>
+    </footer>
+  </div>
+
+  <div class="sr-only" id="liveStatus" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript>
+    <p class="noscript">请开启 JavaScript，才能敲响这只木鱼。</p>
+  </noscript>
+
+  <dialog id="authDialog" class="account-dialog" aria-labelledby="authTitle">
+    <button type="button" class="dialog-close" data-close aria-label="关闭">×</button>
+    <p class="account-eyebrow">无事 · 有你</p>
+    <h2 id="authTitle">欢迎回来</h2>
+    <p id="authDescription" class="account-note">登录后，每一次轻敲都有记录。</p>
+    <form id="authForm">
+      <label id="usernameField">用户名<input id="username" name="username" minlength="2" maxlength="254" autocomplete="username" required autocapitalize="none" spellcheck="false" placeholder="请输入用户名"></label>
+      <label>密码<input id="password" name="password" type="password" minlength="8" maxlength="128" autocomplete="current-password" required placeholder="至少 8 位"></label>
+      <p id="authMessage" class="account-message" role="status"></p>
+      <button type="submit" id="authSubmit" class="account-primary">登录</button>
+    </form>
+    <button type="button" id="switchAuth" class="account-switch">还没有账户？去注册</button>
+  </dialog>
+  <dialog id="profileDialog" class="account-dialog profile-dialog" aria-labelledby="profileTitle">
+    <button type="button" class="dialog-close" data-close aria-label="关闭">×</button>
+    <p class="account-eyebrow">我的 · 无事簿</p>
+    <h2 id="profileTitle">用户信息</h2>
+    <p class="account-note">一敲一放，记录属于你的无事时光。</p>
+    <div class="tap-total"><span>累计敲击</span><strong id="totalTaps">—</strong><span>次 · 一敲一放，慢慢积累</span></div>
+    <dl class="profile-details"><div><dt>注册时间</dt><dd id="joinedAt">—</dd></div><div><dt>最近敲击</dt><dd id="lastTapAt">尚未敲击</dd></div></dl>
+    <p id="syncMessage" class="account-message" role="status"></p>
+    <button type="button" id="retrySync" class="account-switch" hidden>重新同步</button>
+    <button type="button" id="logoutButton" class="account-secondary">退出登录</button>
+  </dialog>
+  <p id="accountNotice" class="account-notice" role="status" hidden></p>
+</body>
+</html>
